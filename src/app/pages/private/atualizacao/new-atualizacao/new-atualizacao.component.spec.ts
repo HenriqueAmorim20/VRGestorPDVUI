@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AtualizacaoComponent } from './atualizacao.component';
+import { NewOrEditPDVComponent } from './new-atualizacao.component';
 
-describe('AtualizacaoComponent', () => {
-  let component: AtualizacaoComponent;
-  let fixture: ComponentFixture<AtualizacaoComponent>;
+describe('NewOrEditRedeComponent', () => {
+  let component: NewOrEditPDVComponent;
+  let fixture: ComponentFixture<NewOrEditPDVComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AtualizacaoComponent],
+      imports: [NewOrEditPDVComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(AtualizacaoComponent);
+    fixture = TestBed.createComponent(NewOrEditPDVComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

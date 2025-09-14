@@ -1,0 +1,7 @@
+.ant-upload.ant-upload-drag p.ant-upload-drag-icon .anticon {
+  color: var(--color-primary-dark-1);
+}
+
+.ant-upload.ant-upload-drag:not(.ant-upload-disabled):hover {
+  border-color: var(--color-primary-light-2);
+}

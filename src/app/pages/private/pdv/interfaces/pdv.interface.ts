@@ -11,5 +11,5 @@ export interface PDV extends TableData {
 
 export interface PDVFilters extends Record<string, unknown> {
   id?: string;
-  idRede?: number | null;
+  idsLojas?: number[] | null;
 }

@@ -13,6 +13,8 @@ import { TranslatePipe } from '../../../../shared/pipes/translate/translate.pipe
 import { FormConfig } from '../../../../shared/interfaces/form-config.interface';
 import { PDVService } from '../pdv.service';
 import { PDV } from '../interfaces/pdv.interface';
+import { PDVStatus } from '../../../../shared/enums/pdv-status.enum';
+import { PDV_STATUS_OPTIONS } from '../../../../shared/constants/pdv-status-options';
 
 @Component({
   selector: 'vr-new-pdv',
@@ -53,6 +55,14 @@ export class NewOrEditPDVComponent extends BaseNewOrEditComponent<PDV> {
     },
     {
       formFieldType: FormFieldType.SELECT,
+      formName: 'status',
+      label: 'common.status',
+      class: 'flex-basis-20',
+      data: PDV_STATUS_OPTIONS,
+      disabled: true,
+    },
+    {
+      formFieldType: FormFieldType.SELECT,
       formName: 'idLoja',
       label: 'store.title',
       class: 'flex-basis-25',
@@ -65,5 +75,6 @@ export class NewOrEditPDVComponent extends BaseNewOrEditComponent<PDV> {
     id: [{ value: '', disabled: true }],
     uuid: [{ value: '', disabled: true }],
     idLoja: ['', [Validators.required]],
+    status: [{ value: PDVStatus.UNLINKED, disabled: true }, [Validators.required]],
   };
 }

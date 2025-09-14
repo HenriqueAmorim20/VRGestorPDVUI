@@ -1,5 +1,9 @@
 {
   "common": {
+    "upload-text": "Clique ou arraste o arquivo nesta área para fazer o upload.",
+    "upload-hint": "bla bla bla",
+    "pdvs": "PDVs",
+    "send": "Enviar",
     "uuid": "UUID",
     "stores": "Lojas",
     "networks": "Redes",
@@ -126,6 +130,18 @@
     "create": "Cadastrar PDV"
   },
   "update": {
-    "title": "Atualização"
+    "title": "Atualização",
+    "create": "Iniciar Atualização"
+  },
+  "enums": {
+    "pdv_status": {
+      "unlinked": "Não vinculado",
+      "linked": "Vinculado"
+    },
+    "atualizacao_status": {
+      "sent": "Enviado",
+      "executed": "Executado",
+      "error": "Erro"
+    }
   }
 }

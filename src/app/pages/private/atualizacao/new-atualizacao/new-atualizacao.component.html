@@ -1,0 +1,27 @@
+<vr-page-header title="update.create">
+  <button class="primary-outline" nz-button (click)="navigateToList()">
+    <nz-icon nzType="arrow-left" nzTheme="outline"></nz-icon>
+
+    {{ 'common.back' | translate }}
+  </button>
+
+  <button nz-button class="primary" (click)="submit()">
+    <nz-icon nzType="save" nzTheme="outline"></nz-icon>
+
+    {{ 'common.send' | translate }}
+  </button>
+</vr-page-header>
+
+<vr-form-fields-list [form]="form" [fields]="fields"></vr-form-fields-list>
+
+<div class="upload-container">
+  <nz-upload nzType="drag" [nzMultiple]="false" [nzLimit]="1" [nzFileList]="fileList" (nzChange)="handleChange($event)">
+    <p class="ant-upload-drag-icon">
+      <nz-icon nzType="inbox" />
+    </p>
+    <p class="ant-upload-text">{{ 'common.upload-text' | translate }}</p>
+    <p class="ant-upload-hint">
+      {{ 'common.upload-hint' | translate }}
+    </p>
+  </nz-upload>
+</div>

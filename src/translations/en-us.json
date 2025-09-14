@@ -1,5 +1,9 @@
 {
   "common": {
+    "upload-text": "Click or drag file to this area to upload",
+    "upload-hint": "bla bla bla",
+    "pdvs": "PDVs",
+    "send": "Send",
     "uuid": "UUID",
     "stores": "Stores",
     "networks": "Redes",
@@ -126,6 +130,18 @@
     "create": "Register PDV"
   },
   "update": {
-    "title": "Update"
+    "title": "Update",
+    "create": "Create Update"
+  },
+  "enums": {
+    "pdv_status": {
+      "unlinked": "Unlinked",
+      "linked": "Linked"
+    },
+    "atualizacao_status": {
+      "sent": "Sent",
+      "executed": "Executed",
+      "error": "Error"
+    }
   }
 }

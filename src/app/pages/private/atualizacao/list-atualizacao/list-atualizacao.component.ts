@@ -12,14 +12,14 @@ import { FormFieldType } from '../../../../shared/enums/form-field-type.enum';
 import { DispatcherPipeModule } from '../../../../shared/pipes/dispatcher/dispatcher.pipe.module';
 import { FormatIdPipe } from '../../../../shared/pipes/format-id/format-id.pipe';
 import { TranslatePipe } from '../../../../shared/pipes/translate/translate.pipe';
-import { PDVService } from '../pdv.service';
-import { PDV, PDVFilters } from '../interfaces/pdv.interface';
-import { PDV_STATUS_OPTIONS } from '../../../../shared/constants/pdv-status-options';
-import { PDVStatus } from '../../../../shared/enums/pdv-status.enum';
 import { EnumLabelPipe } from '../../../../shared/pipes/enum-label/enum-label.pipe';
+import { AtualizacaoStatus } from '../../../../shared/enums/atualizacao-status.enum';
+import { AtualizacaoService } from '../atualizacao.service';
+import { ATUALIZACAO_STATUS_OPTIONS } from '../../../../shared/constants/atualizacao-status-options';
+import { Atualizacao, AtualizacaoFilters } from '../interfaces/atualizacao.interface';
 
 @Component({
-  selector: 'vr-list-pdv',
+  selector: 'vr-list-atualizacao',
   imports: [
     TableComponent,
     TranslatePipe,
@@ -30,12 +30,15 @@ import { EnumLabelPipe } from '../../../../shared/pipes/enum-label/enum-label.pi
     FormFieldsListComponent,
     RouterModule,
   ],
-  templateUrl: './list-pdv.component.html',
-  styleUrls: ['./list-pdv.component.scss'],
+  templateUrl: './list-atualizacao.component.html',
+  styleUrls: ['./list-atualizacao.component.scss'],
 })
-export class ListPDVComponent extends BaseListComponent<PDV, PDVFilters> implements OnInit, OnDestroy {
+export class ListAtualizacaoComponent
+  extends BaseListComponent<Atualizacao, AtualizacaoFilters>
+  implements OnInit, OnDestroy
+{
   FormFieldType = FormFieldType;
-  service = inject(PDVService);
+  service = inject(AtualizacaoService);
   filterFields: FormFieldOptions[] = [
     {
       formFieldType: FormFieldType.INPUT,
@@ -60,15 +63,15 @@ export class ListPDVComponent extends BaseListComponent<PDV, PDVFilters> impleme
       formName: 'status',
       label: 'common.status',
       class: 'flex-basis-20',
-      data: PDV_STATUS_OPTIONS,
+      data: ATUALIZACAO_STATUS_OPTIONS,
     },
   ];
   createButtonLabel = 'pdv.create';
   title = 'pdv.title';
-  filters: PDVFilters = {
+  filters: AtualizacaoFilters = {
     id: '',
     idsLojas: null,
-    status: PDVStatus.ALL,
+    status: AtualizacaoStatus.ALL,
   };
   tableSettings: TableSettings = {
     checkbox: false,
@@ -81,17 +84,13 @@ export class ListPDVComponent extends BaseListComponent<PDV, PDVFilters> impleme
         pipeConfig: { pipe: FormatIdPipe },
       },
       {
-        label: 'common.uuid',
-        key: 'uuid',
-      },
-      {
-        label: 'store.title',
-        key: 'descricaoLoja',
+        label: 'pdv.title',
+        key: 'descricaoPdvs',
       },
       {
         label: 'common.status',
         key: 'status',
-        pipeConfig: { pipe: EnumLabelPipe, pipeArgs: [PDV_STATUS_OPTIONS] },
+        pipeConfig: { pipe: EnumLabelPipe, pipeArgs: [ATUALIZACAO_STATUS_OPTIONS] },
       },
     ],
     actions: [

@@ -1,0 +1,33 @@
+header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--text-primary);
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--text-primary);
+    margin-right: auto;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 30%;
+      height: 2px;
+      background-color: var(--color-primary);
+    }
+  }
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .upload-container {
+    height: 400px;
+    width: 100%;
+  }
+}
