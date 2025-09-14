@@ -1,0 +1,17 @@
+<vr-page-header title="store.title">
+  <button nz-button class="primary" routerLink="new">
+    <nz-icon nzType="plus" nzTheme="outline"></nz-icon>
+
+    {{ createButtonLabel | translate }}
+  </button>
+</vr-page-header>
+
+<vr-form-fields-list [form]="filtersForm" [fields]="filterFields">
+  <button nz-button class="primary" (click)="search()">
+    <nz-icon nzType="search" nzTheme="outline"></nz-icon>
+
+    {{ 'common.search' | translate }}
+  </button>
+</vr-form-fields-list>
+
+<vr-table [settings]="builtTableSettings" [data]="data"></vr-table>

@@ -1,0 +1,126 @@
+<nz-table
+  #dynamicTable
+  [nzData]="data()"
+  [nzScroll]="{ x: settings().scrollX, y: settings().scrollY }"
+  [nzTableLayout]="settings().tableLayout"
+  [nzSimple]="settings().simple"
+  [nzLoading]="settings().loading"
+  [nzPaginationType]="settings().paginationType"
+  [nzPaginationPosition]="settings().position"
+  [nzShowSizeChanger]="settings().sizeChanger"
+  [nzFrontPagination]="settings().frontPagination"
+  [nzShowPagination]="settings().showPagination"
+  [nzFooter]="settings().footer ?? null"
+  [nzTitle]="settings().title ?? null"
+  [nzSize]="settings().size"
+  [nzTotal]="settings().total"
+  [nzPageSize]="settings().pageSize"
+  [nzPageIndex]="settings().pageIndex"
+  (nzQueryParams)="settings().onQueryParamsChange($event)"
+>
+  <thead>
+    @if (settings().header) {
+      <tr>
+        @if (settings().expandable) {
+          <th nzLeft nzWidth="35px" class="small-padding"></th>
+        }
+
+        @if (settings().checkbox) {
+          <th
+            class="small-padding"
+            nzLeft
+            nzWidth="35px"
+            [(nzChecked)]="allChecked"
+            [nzIndeterminate]="indeterminate"
+            (nzCheckedChange)="checkAll($event)"
+          ></th>
+        }
+
+        @for (column of settings().columns; track column) {
+          @if (column.sort) {
+            <th
+              [nzColumnKey]="column.key"
+              [nzEllipsis]="settings().ellipsis"
+              [nzLeft]="column.fixed === 'left'"
+              [nzRight]="column.fixed === 'right'"
+              [nzWidth]="column.width ?? ''"
+              [nzSortFn]="true"
+            >
+              {{ column.label | translate }}
+            </th>
+          } @else {
+            <th
+              [nzColumnKey]="column.key"
+              [nzEllipsis]="settings().ellipsis"
+              [nzLeft]="column.fixed === 'left'"
+              [nzRight]="column.fixed === 'right'"
+              [nzWidth]="column.width ?? ''"
+            >
+              {{ column.label | translate }}
+            </th>
+          }
+        }
+
+        @if (settings().actions.length > 0) {
+          <th nzRight nzAlign="center" [nzWidth]="getActionsWidth()">{{ 'common.actions' | translate }}</th>
+        }
+      </tr>
+    }
+  </thead>
+
+  <tbody>
+    @for (data of dynamicTable.data; track data) {
+      <tr>
+        @if (settings().expandable) {
+          <td
+            nzLeft
+            [nzExpand]="expandSet.has(data)"
+            (nzExpandChange)="onExpandChange(data, $event)"
+            class="small-padding"
+          ></td>
+        }
+
+        @if (settings().checkbox) {
+          <td
+            nzLeft
+            [nzDisabled]="data.disabled"
+            [(nzChecked)]="data.checked"
+            (nzCheckedChange)="onCheckedChange(data, $event)"
+            class="small-padding"
+          ></td>
+        }
+
+        @for (column of settings().columns; track column) {
+          <td
+            [nzLeft]="column.fixed === 'left'"
+            [nzRight]="column.fixed === 'right'"
+            [nzEllipsis]="settings().ellipsis"
+            [title]="data[column.key] | dispatcher: column.pipeConfig"
+          >
+            {{ data[column.key] | dispatcher: column.pipeConfig }}
+          </td>
+        }
+
+        @if (settings().actions.length > 0) {
+          <td nzRight class="actions" nzAlign="center">
+            @for (action of settings().actions; track action) {
+              <nz-icon
+                tabindex="0"
+                class="action-icon"
+                [nzType]="action.icon"
+                [title]="action.label | translate"
+                (click)="action.onClick(data)"
+              ></nz-icon>
+            }
+          </td>
+        }
+      </tr>
+
+      @if (settings().expandable) {
+        <tr [nzExpand]="expandSet.has(data)">
+          <span class="table-data-expand-content">{{ data.expandContent }}</span>
+        </tr>
+      }
+    }
+  </tbody>
+</nz-table>

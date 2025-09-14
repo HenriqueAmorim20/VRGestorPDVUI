@@ -1,0 +1,91 @@
+.form-field {
+  .ant-form-item {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    .ant-form-item-control {
+      width: 100%;
+      .ant-form-item-control-input-content {
+        .ant-input-affix-wrapper:has(.ant-select-multiple) {
+          padding: 0.15rem 0rem;
+
+          .ant-select {
+            .ant-select-selector {
+              .ant-select-selection-item {
+                background-color: var(--background-tertiary);
+                color: var(--text-primary);
+                border-color: var(--border-color);
+
+                .ant-select-selection-item-remove {
+                  color: var(--text-primary);
+                  margin-left: 0.2rem;
+                }
+              }
+            }
+          }
+        }
+
+        .ant-input-affix-wrapper:has(.ant-select):not(:has(.ant-select-multiple)) {
+          padding: 0.09rem 0rem;
+        }
+        .ant-input-affix-wrapper:has(.ant-select) {
+          .ant-select {
+            .ant-select-clear {
+              background-color: var(--background-primary);
+              color: var(--text-primary);
+            }
+
+            .ant-select-selector {
+              background-color: var(--background-primary);
+              box-shadow: none;
+              color: var(--text-primary);
+              border-width: 0px;
+              border-radius: 0.4rem;
+            }
+
+            .ant-select-arrow {
+              .anticon {
+                color: var(--text-primary);
+              }
+            }
+          }
+
+          .ant-select-focused {
+            .ant-select-selector {
+              border-width: 0px;
+            }
+          }
+
+          .ant-input-suffix {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.ant-select-dropdown {
+  background-color: var(--background-secondary);
+  color: var(--text-primary);
+
+  .ant-select-item {
+    color: var(--text-primary);
+
+    &:hover {
+      background-color: var(--background-tertiary) !important;
+    }
+
+    .ant-select-item-option-state {
+      color: var(--color-primary);
+    }
+  }
+
+  .ant-select-item-option-active:not(.ant-select-item-option-disabled) {
+    background-color: var(--background-secondary);
+  }
+
+  .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+    background-color: var(--background-primary);
+  }
+}

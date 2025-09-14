@@ -1,0 +1,17 @@
+<div class="sidebar-container">
+  @for (menuGroup of menuGroups; track menuGroup.category) {
+    <div class="menu-group">
+      <div class="menu-group-title" [title]="menuGroup.categoryLabel | translate">
+        {{ menuGroup.categoryLabel | translate }}
+      </div>
+
+      @for (item of menuGroup.items; track item.link) {
+        <button nz-button [class.selected]="item.selected" [title]="item.label | translate" [routerLink]="item.link">
+          <nz-icon class="icon" [nzType]="item.icon" nzTheme="outline" />
+
+          <span>{{ item.label | translate }}</span>
+        </button>
+      }
+    </div>
+  }
+</div>

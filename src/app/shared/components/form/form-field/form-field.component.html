@@ -1,0 +1,113 @@
+<form [formGroup]="form()" class="form-field" [class.form-field-checkbox]="isCheckbox">
+  <nz-form-item>
+    @if (label()) {
+      <nz-form-label [nzRequired]="required()" [nzFor]="formName()">{{ label() ?? '' | translate }}</nz-form-label>
+    }
+
+    <nz-form-control [nzHasFeedback]="hasFeedback()" [nzErrorTip]="errorTpl">
+      <nz-input-group [nzSuffix]="suffixTemplate">
+        @switch (formFieldType()) {
+          @case (FormFieldType.INPUT) {
+            <input
+              nz-input
+              [formControlName]="formName()"
+              [type]="passwordVisible ? 'text' : type()"
+              [id]="formName()"
+              [placeholder]="placeholder()"
+            />
+          }
+          @case (FormFieldType.SELECT) {
+            <nz-select
+              nzShowSearch
+              [nzMode]="selectMode()"
+              [nzMaxTagCount]="maxTagCount()"
+              [nzMaxTagPlaceholder]="tagPlaceHolder"
+              [formControlName]="formName()"
+              [nzAllowClear]="allowClear()"
+              [nzServerSearch]="enableServerSearch()"
+              [nzLoading]="loadingData"
+              [nzPlaceHolder]="placeholder() ?? '' | translate"
+              (nzOnSearch)="debounceSearch$.next($event)"
+              [id]="formName()"
+            >
+              @if (!loadingData) {
+                @for (option of data() ?? []; track option.value) {
+                  <nz-option
+                    [nzDisabled]="option.disabled"
+                    [nzValue]="option.value"
+                    [nzLabel]="option.label | translate"
+                  ></nz-option>
+                }
+              } @else {
+                <nz-option nzDisabled nzCustomContent>
+                  <nz-icon nzType="loading" class="loading-icon" />
+
+                  {{ 'common.loading' | translate }}
+                </nz-option>
+              }
+            </nz-select>
+
+            <ng-template #tagPlaceHolder let-selectedList> +{{ selectedList.length }} </ng-template>
+          }
+          @case (FormFieldType.CHECKBOX) {
+            <label nz-checkbox [formControlName]="formName()" [id]="formName()">
+              {{ label() ?? '' | translate }}
+            </label>
+          }
+          @case (FormFieldType.TEXT_AREA) {
+            <textarea
+              nz-input
+              [formControlName]="formName()"
+              [id]="formName()"
+              [placeholder]="placeholder()"
+            ></textarea>
+          }
+          @case (FormFieldType.DATE_RANGE) {
+            <nz-range-picker
+              [formControlName]="formName()"
+              [id]="formName()"
+              [nzAllowClear]="allowClear()"
+              [nzAllowClear]="allowClear()"
+            ></nz-range-picker>
+          }
+          @case (FormFieldType.DATE) {
+            <nz-date-picker
+              [formControlName]="formName()"
+              [id]="formName()"
+              [nzAllowClear]="allowClear()"
+              [nzFormat]="format()"
+            ></nz-date-picker>
+          }
+          @case (FormFieldType.TIME) {
+            <nz-time-picker [formControlName]="formName()" [id]="formName()" nzFormat="HH:mm"></nz-time-picker>
+          }
+          @case (FormFieldType.DATE_TIME) {
+            <nz-date-picker
+              [nzShowTime]="{ nzFormat: 'HH:mm' }"
+              nzFormat="dd/MM/yyyy HH:mm"
+              [formControlName]="formName()"
+              [id]="formName()"
+              [nzAllowClear]="allowClear()"
+            ></nz-date-picker>
+          }
+        }
+
+        <ng-template #suffixTemplate>
+          @if (isPassword) {
+            <nz-icon
+              class="ant-input-password-icon"
+              [nzType]="passwordVisible ? 'eye-invisible' : 'eye'"
+              (click)="togglePasswordVisibility()"
+            />
+          } @else if (suffixIcon()) {
+            <nz-icon [nzType]="suffixIcon() ?? ''" />
+          }
+        </ng-template>
+
+        <ng-template #errorTpl let-control>
+          <vr-form-field-error [control]="control" />
+        </ng-template>
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+</form>

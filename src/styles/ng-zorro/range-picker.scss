@@ -1,0 +1,218 @@
+.form-field {
+  .ant-form-item {
+    .ant-form-item-control {
+      .ant-form-item-control-input-content {
+        .ant-input-affix-wrapper:has(.ant-picker-range),
+        .ant-input-affix-wrapper:has(.ant-picker) {
+          padding: 0.16rem 0.16rem;
+
+          .ant-input-suffix {
+            margin-left: 0;
+          }
+        }
+
+        .ant-picker-focused {
+          border: none;
+          box-shadow: none;
+        }
+
+        .ant-picker-range,
+        .ant-picker {
+          width: 100%;
+          background-color: var(--background-primary);
+          border: none;
+          border-radius: 0.4rem;
+          color: var(--text-primary);
+
+          .ant-picker-range-separator,
+          .ant-picker-suffix,
+          .ant-picker-clear {
+            .anticon {
+              color: var(--text-primary);
+              background-color: var(--background-primary);
+            }
+          }
+
+          .ant-picker-input {
+            input {
+              color: var(--text-primary);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.ant-picker-range-arrow::before {
+  background-color: var(--background-primary);
+}
+
+.ant-picker-panel-container {
+  background-color: var(--background-primary);
+  border-color: var(--border-color);
+
+  .ant-picker-header {
+    border-color: var(--border-color);
+    button {
+      color: var(--text-quaternary);
+      opacity: 0.9;
+
+      &:hover {
+        color: var(--color-primary);
+        opacity: 1;
+      }
+    }
+  }
+
+  .ant-picker-content {
+    .ant-picker-cell {
+      color: var(--text-primary);
+      opacity: 0.5;
+    }
+
+    .ant-picker-cell-in-view {
+      color: var(--text-primary);
+      opacity: 1;
+    }
+
+    th {
+      color: var(--text-primary);
+    }
+
+    .ant-picker-cell:hover:not(.ant-picker-cell-in-view) .ant-picker-cell-inner,
+    .ant-picker-cell:hover:not(.ant-picker-cell-selected):not(.ant-picker-cell-range-start):not(
+        .ant-picker-cell-range-end
+      ):not(.ant-picker-cell-range-hover-start):not(.ant-picker-cell-range-hover-end)
+      .ant-picker-cell-inner {
+      background: var(--background-tertiary);
+    }
+
+    .ant-picker-cell-in-view.ant-picker-cell-today .ant-picker-cell-inner::before {
+      border-color: var(--color-primary);
+    }
+
+    .ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner,
+    .ant-picker-cell-in-view.ant-picker-cell-range-start .ant-picker-cell-inner,
+    .ant-picker-cell-in-view.ant-picker-cell-range-end .ant-picker-cell-inner {
+      color: var(--color-neutral-light-1);
+      background: var(--color-primary);
+    }
+
+    .ant-picker-cell-in-view.ant-picker-cell-range-hover-start:not(.ant-picker-cell-in-range):not(
+        .ant-picker-cell-range-start
+      ):not(.ant-picker-cell-range-end)::after,
+    .ant-picker-cell-in-view.ant-picker-cell-range-hover-end:not(.ant-picker-cell-in-range):not(
+        .ant-picker-cell-range-start
+      ):not(.ant-picker-cell-range-end)::after,
+    .ant-picker-cell-in-view.ant-picker-cell-range-hover-start.ant-picker-cell-range-start-single::after,
+    .ant-picker-cell-in-view.ant-picker-cell-range-hover-start.ant-picker-cell-range-start.ant-picker-cell-range-end.ant-picker-cell-range-end-near-hover::after,
+    .ant-picker-cell-in-view.ant-picker-cell-range-hover-end.ant-picker-cell-range-start.ant-picker-cell-range-end.ant-picker-cell-range-start-near-hover::after,
+    .ant-picker-cell-in-view.ant-picker-cell-range-hover-end.ant-picker-cell-range-end-single::after,
+    .ant-picker-cell-in-view.ant-picker-cell-range-hover:not(.ant-picker-cell-in-range)::after {
+      border-color: var(--color-primary);
+    }
+
+    .ant-picker-cell-in-view.ant-picker-cell-in-range.ant-picker-cell-range-hover::before,
+    .ant-picker-cell-in-view.ant-picker-cell-range-start.ant-picker-cell-range-hover::before,
+    .ant-picker-cell-in-view.ant-picker-cell-range-end.ant-picker-cell-range-hover::before,
+    .ant-picker-cell-in-view.ant-picker-cell-range-start:not(
+        .ant-picker-cell-range-start-single
+      ).ant-picker-cell-range-hover-start::before,
+    .ant-picker-cell-in-view.ant-picker-cell-range-end:not(
+        .ant-picker-cell-range-end-single
+      ).ant-picker-cell-range-hover-end::before,
+    .ant-picker-panel
+      > :not(.ant-picker-date-panel)
+      .ant-picker-cell-in-view.ant-picker-cell-in-range.ant-picker-cell-range-hover-start::before,
+    .ant-picker-panel
+      > :not(.ant-picker-date-panel)
+      .ant-picker-cell-in-view.ant-picker-cell-in-range.ant-picker-cell-range-hover-end::before {
+      background: var(--date-picker-background-2);
+    }
+
+    .ant-picker-cell-in-view.ant-picker-cell-in-range::before {
+      background: var(--date-picker-background-3);
+    }
+
+    .ant-picker-cell-in-view.ant-picker-cell-range-start:not(.ant-picker-cell-range-start-single)::before,
+    .ant-picker-cell-in-view.ant-picker-cell-range-end:not(.ant-picker-cell-range-end-single)::before {
+      background: var(--date-picker-background-3);
+    }
+  }
+}
+
+.ant-picker-cell-in-view.ant-picker-cell-in-range.ant-picker-cell-range-hover::before,
+.ant-picker-cell-in-view.ant-picker-cell-range-start.ant-picker-cell-range-hover::before,
+.ant-picker-cell-in-view.ant-picker-cell-range-end.ant-picker-cell-range-hover::before,
+.ant-picker-cell-in-view.ant-picker-cell-range-start:not(
+    .ant-picker-cell-range-start-single
+  ).ant-picker-cell-range-hover-start::before,
+.ant-picker-cell-in-view.ant-picker-cell-range-end:not(
+    .ant-picker-cell-range-end-single
+  ).ant-picker-cell-range-hover-end::before,
+.ant-picker-panel
+  > :not(.ant-picker-date-panel)
+  .ant-picker-cell-in-view.ant-picker-cell-in-range.ant-picker-cell-range-hover-start::before,
+.ant-picker-panel
+  > :not(.ant-picker-date-panel)
+  .ant-picker-cell-in-view.ant-picker-cell-in-range.ant-picker-cell-range-hover-end::before {
+  background: var(--date-picker-background-1);
+}
+
+.ant-picker-date-panel
+  .ant-picker-cell-in-view.ant-picker-cell-in-range.ant-picker-cell-range-hover-start
+  .ant-picker-cell-inner::after,
+.ant-picker-date-panel
+  .ant-picker-cell-in-view.ant-picker-cell-in-range.ant-picker-cell-range-hover-end
+  .ant-picker-cell-inner::after {
+  background: var(--date-picker-background-1);
+}
+
+.ant-picker-range .ant-picker-active-bar {
+  background: var(--color-primary);
+}
+
+.ant-picker-panel .ant-picker-footer {
+  border-color: var(--border-color);
+
+  a {
+    color: var(--color-primary);
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.ant-picker-panel-container .ant-picker-panel {
+  border: none;
+}
+
+.ant-picker-content {
+  .ant-picker-time-panel-column {
+    .ant-picker-time-panel-cell {
+      .ant-picker-time-panel-cell-inner {
+        color: var(--text-primary);
+      }
+    }
+
+    .ant-picker-time-panel-cell-selected {
+      .ant-picker-time-panel-cell-inner {
+        background-color: var(--date-picker-background-2);
+      }
+    }
+  }
+
+  .ant-picker-time-panel-column > li.ant-picker-time-panel-cell .ant-picker-time-panel-cell-inner:hover {
+    background: var(--date-picker-background-1);
+  }
+}
+
+.ant-picker-time-panel-column:not(:first-child) {
+  border-left: 1px solid var(--border-color);
+}
+
+.ant-picker-header-view {
+  color: var(--text-primary);
+}

@@ -1,0 +1,82 @@
+.form-field {
+  .ant-form-item {
+    margin-bottom: 12px;
+
+    .ant-form-item-label {
+      label {
+        color: var(--text-primary);
+      }
+    }
+
+    .ant-form-item-control {
+      .ant-form-item-control-input-content {
+        .ant-input-affix-wrapper-disabled {
+          opacity: 0.5;
+        }
+
+        .ant-input-affix-wrapper:has(.ant-select-disabled) {
+          opacity: 0.5;
+        }
+
+        .ant-input-affix-wrapper:has(.ant-picker-disabled) {
+          opacity: 0.5;
+        }
+
+        .ant-input-affix-wrapper {
+          background-color: var(--background-primary);
+          border-color: var(--border-color);
+          border-width: 1px;
+          border-radius: 0.4rem;
+          padding: 0.4rem 0.7rem;
+
+          &:focus {
+            box-shadow: var(--focus-box-shadow);
+          }
+
+          &.ant-input-affix-wrapper-focused {
+            box-shadow: var(--focus-box-shadow);
+          }
+
+          .ant-input-suffix {
+            .anticon {
+              color: var(--text-primary);
+            }
+
+            .ant-form-item-feedback-icon {
+              .anticon {
+                color: inherit;
+              }
+            }
+          }
+
+          .ant-input {
+            background-color: var(--backgground-primary);
+            color: var(--text-primary);
+
+            &::placeholder {
+              opacity: 0.5;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.ant-form-item:has(.ant-form-item-explain) {
+  margin-bottom: 0px;
+}
+
+.ant-form-item-with-help .ant-form-item-explain {
+  max-height: 10px;
+}
+
+:focus {
+  border-color: var(--color-primary);
+  outline-color: var(--color-primary);
+}
+
+:focus-visible {
+  border-color: var(--color-primary);
+  outline-color: var(--color-primary);
+}

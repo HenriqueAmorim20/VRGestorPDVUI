@@ -1,0 +1,77 @@
+.ant-btn {
+  background-color: transparent;
+  color: var(--text-primary);
+  border-color: transparent;
+  border-radius: 0.4rem;
+
+  &:focus {
+    background-color: inherit;
+    color: inherit;
+    border-color: var(--border-color) !important;
+  }
+
+  &:focus-visible {
+    background-color: inherit;
+    color: inherit;
+    border-color: var(--text-primary) !important;
+  }
+
+  &:hover {
+    background-color: var(--background-tertiary);
+    border-color: transparent;
+    color: var(--text-primary);
+  }
+
+  &.primary,
+  &-primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-neutral-light-1);
+
+    span {
+      color: var(--color-neutral-light-1);
+    }
+
+    &:hover {
+      background-color: var(--color-primary);
+      border-color: var(--color-primary);
+      color: var(--color-neutral-light-1);
+      opacity: 0.9;
+    }
+  }
+
+  &.primary-outline {
+    background-color: var(--background-secondary);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+
+    &:hover {
+      background-color: var(--background-tertiary);
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+      opacity: 0.9;
+    }
+
+    &:focus-visible {
+      background-color: inherit;
+      color: inherit;
+      border-color: var(--color-primary-dark-1) !important;
+    }
+  }
+}
+
+.ant-btn[disabled],
+.ant-btn[disabled]:hover,
+.ant-btn[disabled]:focus,
+.ant-btn[disabled]:active {
+  color: var(--text-quaternary);
+  border: none;
+  background: var(--background-quaternary);
+  text-shadow: none;
+  box-shadow: none;
+  opacity: 0.7;
+}
+
+.ant-btn-dangerous {
+  color: var(--color-neutral-light-1) !important;
+}

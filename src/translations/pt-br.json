@@ -1,0 +1,131 @@
+{
+  "common": {
+    "uuid": "UUID",
+    "stores": "Lojas",
+    "networks": "Redes",
+    "general": "Geral",
+    "others": "Outros",
+    "logout": "Sair",
+    "active": "Ativo",
+    "inactive": "Inativo",
+    "title": "Função",
+    "id": "ID",
+    "name": "Nome",
+    "email": "Email",
+    "phone": "Telefone",
+    "address": "Endereço",
+    "description": "Descrição",
+    "created_at": "Criado em",
+    "updated_at": "Atualizado em",
+    "actions": "Ações",
+    "edit": "Editar",
+    "delete": "Excluir",
+    "search": "Buscar",
+    "all": "Todos",
+    "yes": "Sim",
+    "no": "Não",
+    "loading": "Carregando...",
+    "select_option": "Selecione uma opção",
+    "save": "Salvar",
+    "cancel": "Cancelar",
+    "back": "Voltar",
+    "validity_period": "Período de vigência",
+    "validity": "Vigência",
+    "start_date": "Início vigência",
+    "end_date": "Término vigência",
+    "from": "De",
+    "to": "Até",
+    "management": "Gestão",
+    "period": "Período",
+    "date": "Data",
+    "status": "Status",
+    "origin": "Origem",
+    "service": "Serviço",
+    "services": "Serviços",
+    "date_time": "Data e hora",
+    "start_date_period": "Período de Início",
+    "end_date_period": "Período de Término",
+    "today": "Hoje"
+  },
+  "notifications": {
+    "title": "Notificações",
+    "read": "Lido",
+    "new": "Novo"
+  },
+  "login": {
+    "title": "Login",
+    "subtitle": "Preencha seus dados para continuar",
+    "description": "Gestor de Atualizações do PDV",
+    "email": "Email",
+    "password": "Senha",
+    "remember_me": "Lembrar-me",
+    "login_button": "Entrar",
+    "forgot_password": "Esqueceu sua senha?"
+  },
+  "errors": {
+    "invalid_credentials": "Credenciais inválidas",
+    "required": "Este campo é obrigatório",
+    "email": "Por favor, insira um email válido",
+    "minlength": "Este campo deve ter pelo menos {{value}} caracteres",
+    "maxlength": "Este campo deve ter no máximo {{value}} caracteres",
+    "min": "Este campo deve ser maior que {{value}}",
+    "max": "Este campo deve ser menor que {{value}}",
+    "invalid-field": "Campo inválido",
+    "end_not_after_start": "Deve ser depois de {{value}}"
+  },
+  "dashboard": {
+    "title": "Dashboard"
+  },
+  "messages": {
+    "error": "Algo deu errado...",
+    "success": "Sucesso!",
+    "warning": "Atenção",
+    "frontend": {
+      "required_fields": "Preencha corretamente todos os campos obrigatórios"
+    },
+    "backend": {
+      "invalid_filter_format": "Formato de filtro inválido",
+      "invalid_sort_format": "Formato de ordenação inválido",
+      "invalid_filter_select_format": "Formato de filtro de seleção inválido",
+      "invalid_credentials": "Credenciais inválidas",
+      "user_not_found": "Usuário não encontrado com as credenciais informadas",
+      "login_success": "Login realizado com sucesso",
+      "logout_success": "Logout realizado com sucesso",
+      "login_error": "Erro ao realizar login",
+      "not_found": "Registro não encontrado",
+      "internal_server_error": "Erro interno do servidor",
+      "database_error": "Erro ao acessar o banco de dados",
+      "request_error": "Erro ao realizar a requisição",
+      "created": "Registro criado com sucesso",
+      "updated": "Registro atualizado com sucesso",
+      "deleted": "Registro excluído com sucesso",
+      "unauthorized": "Não autorizado"
+    }
+  },
+  "modal": {
+    "confirm_exit": "Tem certeza que deseja sair?",
+    "confirm_exit_description": "Todas as alterações não salvas serão perdidas.",
+    "confirm_remove": "Tem certeza que deseja remover?",
+    "confirm_remove_description": "Esta ação não pode ser revertida.",
+    "confirm": "Confirmar",
+    "cancel": "Cancelar"
+  },
+  "network": {
+    "title": "Rede",
+    "create": "Cadastrar Rede"
+  },
+  "company": {
+    "title": "Empresa"
+  },
+  "store": {
+    "title": "Loja",
+    "create": "Cadastrar Loja"
+  },
+  "pdv": {
+    "title": "PDV",
+    "create": "Cadastrar PDV"
+  },
+  "update": {
+    "title": "Atualização"
+  }
+}

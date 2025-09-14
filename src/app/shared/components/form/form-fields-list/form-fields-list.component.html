@@ -1,0 +1,26 @@
+@if (form()) {
+  <form nz-form [nzLayout]="'vertical'" [formGroup]="form()" class="form-fields-container">
+    @for (field of fields(); track field.formName) {
+      <vr-form-field
+        [form]="form()"
+        [formFieldType]="field.formFieldType"
+        [formName]="field.formName"
+        [label]="field.label"
+        [type]="field.type ?? 'text'"
+        [placeholder]="field.placeholder ?? '' | translate"
+        [class]="field.class"
+        [data]="field.data"
+        [required]="field.required"
+        [hasFeedback]="field.hasFeedback"
+        [enableServerSearch]="field.enableServerSearch"
+        [serverResourcePath]="field.serverResourcePath"
+        [selectMode]="field.selectMode ?? 'default'"
+        [maxTagCount]="field.maxTagCount ?? 1"
+        [allowClear]="field.allowClear"
+        [format]="field.format ?? 'dd/MM/yyyy'"
+      ></vr-form-field>
+    }
+
+    <ng-content></ng-content>
+  </form>
+}

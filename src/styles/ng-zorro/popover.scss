@@ -1,0 +1,30 @@
+.ant-popover {
+  &-content {
+    .ant-popover-arrow {
+      &-content::before {
+        background-color: var(--background-secondary);
+      }
+    }
+
+    .ant-popover-inner {
+      background-color: var(--background-secondary);
+      border-radius: 0.4rem;
+      &-content {
+        padding: 0.2rem;
+        background-color: var(--background-secondary);
+        border-radius: 0.4rem;
+        width: 100%;
+      }
+
+      .ant-popover-title {
+        border-bottom: 1px solid var(--border-color);
+        color: var(--text-primary);
+      }
+    }
+  }
+}
+
+.ant-divider-horizontal {
+  background-color: var(--border-color);
+  margin: 2px 0px;
+}

@@ -1,0 +1,21 @@
+<nz-header class="header">
+  @if (!public) {
+    <button tabindex="0" class="collapse-sider" nz-button (click)="toggleSidebar.emit()">
+      <nz-icon class="collapse-sider-icon" nzType="layout" />
+    </button>
+  }
+
+  <span class="app-title">VRGestor PDV UI</span>
+
+  <span class="spacer"></span>
+
+  <vr-language-selector></vr-language-selector>
+
+  <vr-theme-selector></vr-theme-selector>
+
+  @if (!public) {
+    <vr-notifications-panel></vr-notifications-panel>
+
+    <vr-user-panel></vr-user-panel>
+  }
+</nz-header>

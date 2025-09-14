@@ -1,0 +1,13 @@
+<nz-layout class="business-layout">
+  <vr-nav-bar (toggleSidebar)="toggleSidebar()"></vr-nav-bar>
+
+  <nz-layout class="business-layout-inner">
+    <nz-sider [nzCollapsed]="sidebarCollapsed" [nzCollapsedWidth]="58">
+      <vr-side-bar></vr-side-bar>
+    </nz-sider>
+
+    <nz-content class="business-layout-content">
+      <router-outlet></router-outlet>
+    </nz-content>
+  </nz-layout>
+</nz-layout>

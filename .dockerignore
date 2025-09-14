@@ -1,0 +1,21 @@
+# Node modules
+node_modules/
+
+# Git repository files
+.git/
+
+# Build output
+dist/
+.angular/cache/
+
+# Logs
+npm-debug.log*
+*.log
+
+# Editor directories and files
+.vscode/
+.idea/
+
+# Docker files
+Dockerfile
+.dockerignore

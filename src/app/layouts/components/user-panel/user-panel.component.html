@@ -1,0 +1,31 @@
+<button
+  class="trigger-panel"
+  nz-button
+  tabindex="0"
+  nz-popover
+  [nzPopoverContent]="contentTemplate"
+  nzPopoverPlacement="bottomRight"
+  nzPopoverTrigger="click"
+>
+  <nz-icon class="trigger-panel-icon" nzType="user" nzTheme="outline" />
+</button>
+
+<ng-template #contentTemplate>
+  <div class="user-panel">
+    <div class="user-info">
+      <span>{{ user?.name }}</span>
+
+      <small>{{ user?.email }}</small>
+    </div>
+
+    <nz-divider></nz-divider>
+
+    <div class="actions">
+      <button tabindex="0" nz-button style="text-align: start" (click)="logout()">
+        <nz-icon class="icon" nzType="logout" nzTheme="outline" />
+
+        <span>{{ 'common.logout' | translate }}</span>
+      </button>
+    </div>
+  </div>
+</ng-template>

@@ -1,0 +1,16 @@
+<div class="language-selector">
+  @for (language of languages; track language) {
+    <button
+      tabindex="0"
+      nz-button
+      [class.active]="language.value === selectedLanguage"
+      (click)="setLanguage(language.value)"
+    >
+      {{ language.label }}
+    </button>
+
+    @if (language.label === 'PT') {
+      <nz-divider nzType="vertical"></nz-divider>
+    }
+  }
+</div>

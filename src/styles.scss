@@ -1,0 +1,57 @@
+@use './styles/themes/default.scss';
+@use './styles/themes/dark.scss';
+@use './styles/ng-zorro/_index.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  height: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+}
+
+* {
+  transition: 0.2s all ease !important;
+
+  &:focus-visible {
+    border-color: var(--text-primary) !important;
+  }
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-primary) !important;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--background-secondary) !important;
+  border-radius: 4px;
+  border: 2px solid var(--background-primary) !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--background-tertiary) !important;
+}
+
+.form-fields-container {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin: 2rem 0 2rem;
+
+  @for $i from 1 through 100 {
+    .flex-basis-#{$i} {
+      flex-basis: $i * 1%;
+      min-width: calc(10 / (1 / $i) * 1px);
+    }
+  }
+
+  button {
+    margin: auto 0rem;
+    transform: translateY(0.5rem);
+    padding: 6px 20px;
+    height: unset;
+  }
+}

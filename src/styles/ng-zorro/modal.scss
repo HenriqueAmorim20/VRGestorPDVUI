@@ -1,0 +1,39 @@
+.ant-modal {
+  &-content {
+    background-color: var(--background-primary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 0.6rem;
+
+    .ant-modal-close-icon {
+      color: var(--text-primary);
+    }
+
+    .ant-modal-confirm-title,
+    .ant-modal-confirm-content {
+      color: var(--text-primary);
+    }
+
+    .ant-btn {
+      border-color: var(--border-color);
+      color: var(--text-primary);
+    }
+  }
+}
+
+.ant-modal-header {
+  background-color: var(--background-primary);
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-primary);
+  border-radius: 0.6rem 0.6rem 0 0;
+
+  .ant-modal-title h2 {
+    margin: 0;
+    color: var(--text-primary);
+  }
+}
+
+.ant-modal-footer {
+  border-top: 1px solid var(--border-color);
+  border-radius: 0 0 0.6rem 0.6rem;
+}

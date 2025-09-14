@@ -1,0 +1,117 @@
+.trigger-panel {
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background: transparent;
+  color: var(--text-primary);
+  position: relative;
+
+  &:not(:focus-visible) {
+    outline-color: transparent;
+    border-color: transparent;
+  }
+
+  &:hover {
+    background-color: var(--background-tertiary);
+  }
+
+  .trigger-panel-icon {
+    font-size: 17px;
+    position: relative;
+
+    &.unread::after {
+      content: '';
+      display: block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: var(--color-primary);
+      position: absolute;
+      top: 0;
+      right: 2px;
+    }
+  }
+}
+
+.notifications-panel {
+  color: var(--text-primary);
+  width: 300px;
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+    &-title {
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    gap: 5px;
+    max-height: 300px;
+    overflow-y: scroll;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      position: relative;
+      background-color: var(--background-primary);
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &.read {
+        opacity: 0.5;
+        background-color: var(--background-tertiary);
+
+        &:hover {
+          opacity: 0.4;
+        }
+
+        .notifications-panel-content-item-unread-indicator {
+          &-dot {
+            background-color: var(--text-primary);
+          }
+        }
+      }
+
+      &-unread-indicator {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-bottom: 0.3rem;
+
+        &-dot {
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background-color: var(--color-primary);
+        }
+
+        &-text {
+          font-size: 12px;
+          font-weight: 600;
+        }
+      }
+
+      &-title {
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      &-date {
+        font-size: 12px;
+        margin-top: 0.3rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<vr-page-header title="store.create">
+  <button class="primary-outline" nz-button (click)="navigateToList()">
+    <nz-icon nzType="arrow-left" nzTheme="outline"></nz-icon>
+
+    {{ 'common.back' | translate }}
+  </button>
+
+  <button nz-button class="primary" (click)="submit()">
+    <nz-icon nzType="save" nzTheme="outline"></nz-icon>
+
+    {{ 'common.save' | translate }}
+  </button>
+</vr-page-header>
+
+<vr-form-fields-list [form]="form" [fields]="fields"></vr-form-fields-list>

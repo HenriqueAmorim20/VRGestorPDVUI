@@ -1,0 +1,13 @@
+.ant-notification-notice {
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  border-radius: 0.6em;
+
+  &-message {
+    color: var(--text-primary);
+  }
+
+  &-close {
+    color: var(--text-primary);
+  }
+}

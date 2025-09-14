@@ -1,0 +1,131 @@
+{
+  "common": {
+    "uuid": "UUID",
+    "stores": "Stores",
+    "networks": "Redes",
+    "general": "General",
+    "others": "Others",
+    "logout": "Logout",
+    "active": "Active",
+    "inactive": "Inactive",
+    "title": "Role",
+    "id": "ID",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address",
+    "description": "Description",
+    "created_at": "Created at",
+    "updated_at": "Updated at",
+    "actions": "Actions",
+    "edit": "Edit",
+    "delete": "Delete",
+    "search": "Search",
+    "all": "All",
+    "yes": "Yes",
+    "no": "No",
+    "loading": "Loading...",
+    "select_option": "Select an option",
+    "save": "Save",
+    "cancel": "Cancel",
+    "back": "Back",
+    "validity_period": "Validity period",
+    "validity": "Validity",
+    "start_date": "Start date",
+    "end_date": "End date",
+    "from": "From",
+    "to": "To",
+    "management": "Management",
+    "period": "Period",
+    "date": "Date",
+    "status": "Status",
+    "origin": "Origin",
+    "service": "Service",
+    "services": "Services",
+    "date_time": "Date and time",
+    "start_date_period": "Start period",
+    "end_date_period": "End period",
+    "today": "Today"
+  },
+  "notifications": {
+    "title": "Notifications",
+    "read": "Read",
+    "new": "New"
+  },
+  "login": {
+    "title": "Login",
+    "subtitle": "Fill in your details to continue",
+    "description": "POS Update Manager",
+    "email": "Email",
+    "password": "Password",
+    "remember_me": "Remember me",
+    "login_button": "Login",
+    "forgot_password": "Forgot your password?"
+  },
+  "errors": {
+    "invalid_credentials": "Invalid credentials",
+    "required": "This field is required",
+    "email": "Please enter a valid email",
+    "minlength": "This field must have at least {{value}} characters",
+    "maxlength": "This field must have at most {{value}} characters",
+    "min": "This field must be greater than {{value}}",
+    "max": "This field must be less than {{value}}",
+    "invalid-field": "Invalid field",
+    "end_not_after_start": "Must be after {{value}}"
+  },
+  "dashboard": {
+    "title": "Dashboard"
+  },
+  "messages": {
+    "error": "Something went wrong...",
+    "success": "Success!",
+    "warning": "Warning",
+    "frontend": {
+      "required_fields": "Please correctly fill in all required fields"
+    },
+    "backend": {
+      "invalid_filter_format": "Invalid filter format",
+      "invalid_sort_format": "Invalid sort format",
+      "invalid_filter_select_format": "Invalid select filter format",
+      "invalid_credentials": "Invalid credentials",
+      "user_not_found": "User not found with the provided credentials",
+      "login_success": "Login successful",
+      "logout_success": "Logout successful",
+      "login_error": "Error during login",
+      "not_found": "Record not found",
+      "internal_server_error": "Internal server error",
+      "database_error": "Database access error",
+      "request_error": "Request error",
+      "created": "Record created successfully",
+      "updated": "Record updated successfully",
+      "deleted": "Record deleted successfully",
+      "unauthorized": "Unauthorized"
+    }
+  },
+  "modal": {
+    "confirm_exit": "Are you sure you want to exit?",
+    "confirm_exit_description": "All unsaved changes will be lost.",
+    "confirm_remove": "Are you sure you want to remove?",
+    "confirm_remove_description": "This action cannot be undone.",
+    "confirm": "Confirm",
+    "cancel": "Cancel"
+  },
+  "network": {
+    "title": "Network",
+    "create": "Register Network"
+  },
+  "company": {
+    "title": "Company"
+  },
+  "store": {
+    "title": "Store",
+    "create": "Register Store"
+  },
+  "pdv": {
+    "title": "PDV",
+    "create": "Register PDV"
+  },
+  "update": {
+    "title": "Update"
+  }
+}

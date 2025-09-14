@@ -1,0 +1,80 @@
+:root {
+  --background-primary: var(--color-neutral-light-1);
+  --background-secondary: var(--color-neutral-light-2);
+  --background-tertiary: var(--color-neutral-light-3);
+  --background-quaternary: var(--color-neutral-light-4);
+
+  --text-primary: var(--color-neutral-dark-1);
+  --text-secondary: var(--color-neutral-dark-2);
+  --text-tertiary: var(--color-neutral-dark-3);
+  --text-quaternary: var(--color-neutral-dark-4);
+
+  --border-color: var(--color-neutral-light-3);
+
+  --focus-box-shadow: 0 0 0 2px #2195f336;
+
+  --background-login: var(--color-neutral-light-2);
+  --background-login-card: var(--color-neutral-light-1);
+  --background-login-container: var(--color-neutral-light-1-opacity);
+
+  --background-language-selected: var(--color-primary-light-4);
+  --background-language-hover: var(--color-primary-light-5);
+
+  --background-sidebar-selected: var(--color-primary-light-5);
+
+  --date-picker-background-1: var(--color-primary-light-3);
+  --date-picker-background-2: var(--color-primary-light-4);
+  --date-picker-background-3: var(--color-primary-light-5);
+
+  --linking-icon-background: var(--color-primary-light-5);
+
+  --appointment-service-background: var(--color-primary-light-5);
+
+  --status-pending-bg: #fef9c3;
+  --status-pending-text: #854d0e;
+  --status-confirmed-bg: #dcfce7;
+  --status-confirmed-text: #166534;
+  --status-cancelled-bg: #fee2e2;
+  --status-cancelled-text: #991b1b;
+  --status-completed-bg: #dbeafe;
+  --status-completed-text: #1e40af;
+  --status-rejected-bg: #fff7ed;
+  --status-rejected-text: #9a3412;
+  --status-noshow-bg: #e5e7eb;
+  --status-noshow-text: #374151;
+
+  //! Cores gerais
+  // /* Paleta Primária */
+  --color-primary-dark-1: #f75c41;
+  --color-primary-dark-2: #f64c2e;
+  --color-primary: #f86c54;
+  --color-primary-light-1: #fa8c7a;
+  --color-primary-light-2: #fbad9f;
+  --color-primary-light-3: #fccfc1;
+  --color-primary-light-4: #ffece4;
+  --color-primary-light-5: #fff6f2;
+  // --color-primary-light-5: #e3f2fd;
+  // --color-primary-light-4: #bbdefb;
+  // --color-primary-light-3: #90caf9;
+  // --color-primary-light-2: #64b5f6;
+  // --color-primary-light-1: #42a5f5;
+  // --color-primary: #2196f3;
+  // --color-primary-dark-1: #1e88e5;
+  // --color-primary-dark-2: #1976d2;
+  // --color-primary-dark-3: #1565c0;
+  // --color-primary-dark-4: #0d47a1;
+
+  /* Neutros – Tema Claro */
+  --color-neutral-light-1-opacity: rgba(252, 252, 252, 0.5);
+  --color-neutral-light-1: #fcfcfc;
+  --color-neutral-light-2: #f5f5f5;
+  --color-neutral-light-3: #eaeaea;
+  --color-neutral-light-4: #e0e0e0;
+
+  /* Neutros – Tema Escuro */
+  --color-neutral-dark-1-opacity: rgba(31, 31, 31, 0.5);
+  --color-neutral-dark-1: #1f1f1f;
+  --color-neutral-dark-2: #2a2a2a;
+  --color-neutral-dark-3: #333333;
+  --color-neutral-dark-4: #3d3d3d;
+}

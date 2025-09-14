@@ -1,0 +1,16 @@
+@use './checkbox.scss';
+@use './common-input.scss';
+@use './switch.scss';
+@use './mat-divider.scss';
+@use './popover.scss';
+@use './button.scss';
+@use './select.scss';
+@use './table.scss';
+@use './notification.scss';
+@use './modal.scss';
+@use './range-picker.scss';
+@use './segmented.scss';
+
+:root {
+  --antd-wave-shadow-color: var(--color-primary);
+}

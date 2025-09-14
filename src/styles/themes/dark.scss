@@ -1,0 +1,48 @@
+html[data-theme='dark'] {
+  --background-primary: var(--color-neutral-dark-1);
+  // --background-primary: #03111e;
+  --background-secondary: var(--color-neutral-dark-2);
+  // --background-secondary: rgb(29, 34, 40);
+  --background-tertiary: var(--color-neutral-dark-3);
+  --background-quaternary: var(--color-neutral-dark-4);
+
+  --text-primary: var(--color-neutral-light-1);
+  --text-secondary: var(--color-neutral-light-2);
+  --text-tertiary: var(--color-neutral-light-3);
+  --text-quaternary: var(--color-neutral-light-4);
+
+  --border-color: var(--color-neutral-dark-4);
+
+  --focus-box-shadow: 0 0 0 2px rgba(247, 92, 65, 0.2);
+
+  --background-login: var(--color-neutral-dark-2);
+  --background-login-card: var(--color-neutral-dark-3);
+  --background-login-container: var(--color-neutral-dark-1-opacity);
+  --background-language-selected: var(--color-neutral-dark-3);
+  --background-language-hover: var(--color-neutral-dark-2);
+
+  --background-sidebar-selected: var(--color-neutral-dark-3);
+
+  --date-picker-background-1: var(--color-neutral-dark-4);
+  --date-picker-background-2: var(--color-neutral-dark-3);
+  --date-picker-background-3: var(--color-neutral-dark-2);
+
+  --linking-icon-background: var(--color-neutral-dark-4);
+
+  --appointment-service-background: var(--color-neutral-dark-4);
+
+  --status-pending-bg: #3a3005;
+  --status-pending-text: #fef08a;
+  --status-confirmed-bg: #052e16;
+  --status-confirmed-text: #86efac;
+  --status-cancelled-bg: #431010;
+  --status-cancelled-text: #fecaca;
+  --status-completed-bg: #172554;
+  --status-completed-text: #bfdbfe;
+  --status-rejected-bg: #4a1a06;
+  --status-rejected-text: #fdba74;
+  --status-noshow-bg: #1f2937;
+  --status-noshow-text: #d1d5db;
+
+  // background-color rgb(0, 21, 41)
+}
